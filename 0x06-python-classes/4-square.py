@@ -4,6 +4,7 @@
 
 class Square:
     """ Square class defined by geometric shap
+
         Attributes:
             size (int): Size of square
     """
@@ -11,6 +12,7 @@ class Square:
         """initializes the square
         Args:
             size (int): size of a side of the square
+
         Returns:
             None
         """
@@ -19,6 +21,7 @@ class Square:
     def area(self):
         """
         set square square area
+
         Return:
             the current square area (int)
         """
@@ -28,6 +31,7 @@ class Square:
     def size(self):
         """
         getter of size
+
         Return:
             Size of square
         """
@@ -37,6 +41,7 @@ class Square:
     def size(self, value):
         """
         Setter of size
+        
         Args:
             size (int): size of a side of the square
         Raises
