@@ -41,7 +41,7 @@ class Square:
     def size(self, value):
         """
         Setter of size
-        
+
         Args:
             size (int): size of a side of the square
         Raises
