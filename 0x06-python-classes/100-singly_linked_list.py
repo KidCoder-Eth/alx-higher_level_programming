@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""Module Square"""
 
 
 class Node:
@@ -82,4 +81,3 @@ class SinglyLinkedList:
             node = node.next_node
         new_node.next_node = node.next_node
         node.next_node = new_node
-        
