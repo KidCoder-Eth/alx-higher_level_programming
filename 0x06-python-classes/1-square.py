@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module Square"""
+
+
 class Square:
     """Represents a square.
     Private instance attribute: size.
@@ -7,7 +9,5 @@ class Square:
     """
 
     def __init__(self, size):
-        """Initializes the data
-
-        """
+        """Initializes the data"""
         self.__size = size
