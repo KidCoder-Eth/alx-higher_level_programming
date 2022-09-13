@@ -81,4 +81,4 @@ class SinglyLinkedList:
         while node.next_node and node.next_node.data < value:
             node = node.next_node
         new_node.next_node = node.next_node
-        node.next_node = 
+        node.next_node = new_node
