@@ -23,3 +23,4 @@ if len(sys.argv) > 1:
         my_list.append(elem)
 
 save_to_json_file(my_list, my_file)
+
