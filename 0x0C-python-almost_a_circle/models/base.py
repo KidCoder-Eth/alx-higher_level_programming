@@ -63,7 +63,7 @@ class Base:
             jstr = cls.to_json_string([o.to_dictionary() for o in list_objs])
         filename = cls.__name__ + ".json"
         with open(filename, 'w') as f:
-                f.write(jstr)
+            f.write(jstr)
 
     @staticmethod
     def from_json_string(json_string):
@@ -72,12 +72,12 @@ class Base:
             - json_string: string to convert to list
         """
 
-        l = []
+        lm = []
         if json_string is not None and json_string != '':
             if type(json_string) != str:
                 raise TypeError("json_string must be a string")
-            l = json.loads(json_string)
-        return l
+            lm = json.loads(json_string)
+        return lm
 
     @classmethod
     def create(cls, **dictionary):
@@ -98,15 +98,15 @@ class Base:
         """Returns a list of instances."""
 
         filename = cls.__name__ + ".json"
-        l = []
+        lm = []
         list_dicts = []
         if os.path.exists(filename):
             with open(filename, 'r') as f:
                 s = f.read()
                 list_dicts = cls.from_json_string(s)
                 for d in list_dicts:
-                    l.append(cls.create(**d))
-        return l
+                    lm.append(cls.create(**d))
+        return lm
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
@@ -140,7 +140,7 @@ class Base:
         """
 
         filename = cls.__name__ + ".csv"
-        l = []
+        lm = []
         if os.path.exists(filename):
             with open(filename, 'r') as f:
                 reader = csv.reader(f, delimiter=',')
@@ -154,8 +154,8 @@ class Base:
                         for j, e in enumerate(row):
                             if e:
                                 setattr(i, fields[j], int(e))
-                        l.append(i)
-        return l
+                        lm.append(i)
+        return lm
 
     @staticmethod
     def draw(list_rectangles, list_squares):
