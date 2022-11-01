@@ -1,2 +1,2 @@
--- List rows of the table first_table
-SELECT * FROM first_table;
+-- Insert a row in the table
+INSERT INTO first_table (id, name) VALUES (89, 'Best School')
